@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en" dir = 'ltr'>
+    <head>
+      <meta charset = "utf-8">
+      <title> CHARTS </title>
+      <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/maps.css') }}">
+    </head>
+
+
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h2> VISUALIZING DATA </h2>
+    <p> Bar charts, scatter plots, etc </p>
+    <div class = box>
+      <div id = "side-panel">
+          <div id = 'header'>
+            <h1 id = 'title'> Side Panel </h1>
+            <p> changing the variables </p>
+            <div id = 'days'>
+              <label> Select Day </label>
+            <button type = 'button' id = 0 class = 'map_day'> MON </button>
+            <button type = 'button' id = 1 class = 'map_day'> TUE </button>
+            <button type = 'button' id = 2 class = 'map_day' > WED </button>
+            <button type = 'button' id = 3 class = 'map_day'> THUR </button>
+            <button type = 'button' id = 4 class = 'maps_day'> FRI </button>
+            <button type = 'button' id = 5 class = 'map_day'> SAT </button>
+            <button type = 'button' id = 6 class = 'map_day'> SUN </button>
+          </div>
+
+          <div id = 'Type of User'>
+            <button type = 'button' id = 'Member' class = 'Type'> MEMBER </button>
+            <button type = 'button' id = 'Casual' class = 'Type'> CASUAL </button>
+          </div>
+    </div>
+  </div>
+
+    <div class = box>
+      <div id = 'chartbox'>
+        <p> insert image here </p>
+      </div>
+    </div>
+
+    {% endblock %}
+  </body>
+</html>

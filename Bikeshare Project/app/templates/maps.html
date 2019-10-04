@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang = "en" dir = 'ltr'>
+    <head>
+      <meta charset = "utf-8">
+      <title> MAPS </title>
+      <!-- Leaflet javascript stylesheet -->
+      <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+
+      <!-- Vega Links -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.0-rc2/vega.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.0-beta.10/vega-lite.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-beta.19/vega-embed.js"></script> -->
+
+
+      <style media="screen">
+        /* Hide Vega-Imbed links  */
+        .vega-actions a {
+          visibility:hidden;
+        }
+      </style>
+      <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/maps.css') }}">
+      <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+    </head>
+
+
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h2> VISUALIZING DATA ON MAP </h2>
+    <p> The census tracts change colors based on the distance from the start station. The end station changes colors from the duration
+    of the bikers going from start to end station. We pick the most popular start stations. Change the variables in the side panel
+    to visualize the change in travel movements.</p>
+
+    <div class = 'tool'>
+    <div class = box>
+      <div id = "side-panel">
+          <div id = 'header'>
+            <h1 id = 'title'> Side Panel </h1>
+            <p> Change the Variables to view the duration in minutes on the map</p>
+          </div>
+
+          <div id = 'TypeofUser'>
+            <button type = 'button' id = 'Member' class = 'MemberType'> MEMBER </button>
+            <button type = 'button' id = 'Casual' class = 'MemberType'> CASUAL </button>
+          </div>
+
+          <div id = 'days'>
+            <label> Select Day </label>
+          <button type = 'button' id = "MON" class = "map_day"> MON </button>
+          <button type = 'button' id = 'TUE' class = 'map_day'> TUE </button>
+          <button type = 'button' id = 'WED' class = 'map_day' > WED </button>
+          <button type = 'button' id = 'THUR' class = 'map_day'> THUR </button>
+          <button type = 'button' id = 'FRI' class = 'map_day'> FRI </button>
+          <button type = 'button' id = 'SAT' class = 'map_day'> SAT </button>
+          <button type = 'button' id = 'SUN' class = 'map_day'> SUN </button>
+        </div>
+
+          <div id = 'station'>
+            <label for= 'startstationlist'> Select Start Station </label>
+            <select id = 'startstationlist' class = "selectstation">
+              <option selected disabled hidden> Massachusetts Ave & Dupont Circle NW </option>
+              <option id='Massachusetts' > Massachusetts Ave & Dupont Circle NW </option>
+              <option id = 'Lincoln'> Lincoln Memorial </option>
+              <!-- <option onclick="showImg()"> Columbus Circle/ Union Station </option> -->
+              <option id = 'Jefferson' > Jefferson Dr & 14th St SW </option>
+              <option  id = '15th'> 15th & P St NW </option>
+            </select>
+
+            <!-- <label> Select End Station </label>
+            <select id = 'endstationlist'>
+              <option> 12th Street </option>
+            </select> -->
+
+          </div>
+
+
+
+          <!-- <div id = 'time'>
+            <label> Select Time </label>
+            <button type = 'button' id = 'ALL DAY' class = 'time'> ALL DAY </button>
+            <button type = 'button' id = 'EARLY MORNING' class = 'time'> EARLY MORNING </button>
+            <button type = 'button' id = 'AM PEAK' class = 'time'> AM PEAK </button>
+            <button type = 'button' id = 'MIDDAY' class = 'time'> MIDDAY </button>
+            <button type = 'button' id = 'PM PEAK' class = 'time'> PM PEAK </button>
+            <button type = 'button' id = 'EVENING' class = 'time'> EVENING </button>
+          </div> -->
+
+
+          <div id = 'distance'>
+            <label> Select Max Distance (Miles) <label>
+              <select id = 'miles'>
+                <!-- <option selected disabled hidden> show all </option> -->
+                <!-- <option class = 'default'> show all </option> -->
+                <option id = '6' class = 'mile_option' onClick = showImg()> 6 miles </option>
+                <option id = '5' class = 'mile_option' onClick = showImg()> 5 miles </option>
+                <option id = '4' class = 'mile_option' onClick = showImg()> 4 miles </option>
+                <option id = '3' class = 'mile_option' onClick = showImg()> 3 miles </option>
+                <option id = '2' class = 'mile_option' onClick = showImg()> 2 miles </option>
+                <option id = '1' class = 'mile_option' onClick = showImg()> 1 mile </option>
+              </select>
+          </div>
+
+      </div>
+    </div>
+
+    <div class = box>
+      <div id = 'mapbox'>
+        <!-- <p id = 'mapboxlink'> SOME LINK HERE </p> -->
+        <div id = 'map'>
+        <img id = 'mapboximg' src = "{{ url_for('static', filename = 'images/washingtondc.png') }}">
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'javascript/mapscript.js') }}"> </script>
+    {% endblock %}
+  </body>
+</html>

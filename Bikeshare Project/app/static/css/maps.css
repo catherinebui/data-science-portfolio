@@ -1,0 +1,162 @@
+/* CSS DESIGN OF THE MAPS HTML PAGE */
+body {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    margin-left:auto;
+    margin-right:auto;
+    width:1275px;
+}
+
+#tool {
+  height: auto;
+  width: 80%;
+}
+#mapbox{
+  float: left;
+  height: 430px;
+  width: 48%;
+  display: block;
+  overflow:hidden;
+  border: 1px;
+  color: lime;
+  margin-left:30px;
+  /* border-color: #f2f2f2; */
+  /* background-color: white; */
+    background-color: #E4F6FE;
+}
+#mapbox #map {
+  width: auto;
+  height: inherit;
+  text-align: center;
+  margin-top: -66px;
+}
+
+#mapbox img {
+  width: 80%;
+}
+
+#side-panel {
+  /* margin-top: 100px; */
+  float: right;
+  height: 430px;
+  width: 45%;
+  overflow: hidden;
+  margin-right: 30px;
+  background-position: hsla(89, 43%, 51%, 0.3);
+  display: block;
+  color: white;
+  background-color: darkmagenta;
+}
+#side-panel #title {
+  text-align: center;
+  color: #F3A18D;
+}
+#side-panel #header {
+  margin-left: 6px;
+}
+
+#side-panel button {
+  margin-left: 12px;
+}
+
+#side-panel #TypeofUser{
+  text-align: center;
+  margin-bottom: 10px;
+}
+#side-panel .MemberType {
+  text-align: center;
+  height: 35px;
+  width: 100px;
+  border-radius: 12px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#side-panel #TypeofUser button:hover {
+     background-color: #008CBA;
+      color: white;
+      border: none;
+}
+#side-panel #TypeofUser button.active {
+     background-color: #008CBA;
+     outline: 0;
+     border: none;
+      color: white;
+}
+#side-panel #TypeofUser button:focus{
+     /* background-color: #008CBA; */
+     outline: 0;
+      /* color: white; */
+      border: none;
+}
+
+#side-panel #days button:hover {
+     background-color: #008CBA;
+      color: white;
+      border: none;
+}
+#side-panel #days button.active {
+     background-color: #008CBA;
+     outline: 0;
+     border: none;
+     /* height: auto; */
+      color: white;
+}
+#side-panel #days button:focus{
+     /* background-color: #008CBA; */
+     outline: 0;
+      /* color: white; */
+      border: none;
+}
+#side-panel #days {
+  margin-left: 1px;
+  margin-bottom: 10px;
+}
+
+#side-panel #days button {
+  width: 50px;
+  height: 20px;
+  border-radius: 2px;
+}
+
+#side-panel label {
+  margin-left: 8px;
+}
+
+#startstationlist {
+  background: white;
+}
+#endstationlist {
+  background: white ;
+}
+#station {
+  margin-bottom: 10px;
+}
+
+/* #station .label {
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+} */
+
+/* #side-panel #time button {
+  overflow: hidden;
+  height: 30px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+#side-panel #time button:active{
+  /* background:#008CBA;
+  color: white; */
+/* } */
+/* #side-panel #time button:focus{
+  background:#008CBA;
+  color: white;
+  outline: 0;
+  border: none;
+}  */
+
+#miles {
+  background: whitesmoke;
+}

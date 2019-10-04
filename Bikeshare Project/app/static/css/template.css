@@ -1,0 +1,71 @@
+body {
+    display: block;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1275px;
+    font-family: 'Montserrat', sans-serif;
+}
+.logo {
+      text-align: center;
+      margin-left: 12px;
+      margin-right: 12px;
+      padding: 8px 14px;
+}
+
+
+
+/* The navigation bar */
+.menu {
+  overflow: hidden;
+  background-color: #333;
+  /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  list-style: none;
+  margin-top: 1px;
+  /* margin-left: 15px; */
+  /* margin-right: 20px; */
+}
+.menu ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.menu li {
+  list-style-type: none;
+  float: left;
+  padding: 4px 4px;
+  width: 20%;
+}
+
+
+/* Links inside the navbar */
+.menu a {
+  display: block;
+  color: #f2f2f2;
+  background: violet;
+  border-right: 1px solid #bbb;
+  text-align: center;
+  padding: 10px 14px;
+  margin-left: 12px;
+  margin-right: 12px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.menu a:hover {
+  background: #ddd;
+  color: black;
+}
+
+img #mainpagefrontimage {
+  text-align: center;
+  vertical-align: middle;
+}
