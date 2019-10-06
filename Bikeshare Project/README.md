@@ -11,7 +11,7 @@
 
 ## Technologies
 
-  Pandas, numpy, HTML, CSS, Javascript, Flask, Census Tract API, geopandas, matplotlib, seaborn
+  Pandas, numpy, HTML, CSS, Javascript, Flask, Census Tract API, geopandas, matplotlib, seaborn, Tableau
 
 ## How to use the web app
 
@@ -21,6 +21,11 @@
   3. >>> Export FLASK_APP=main.py
   4. >>> Flask run
   5. Open the server link into a web browser
+  
+## Methodology
+
+I only filter for trips within the Washington DC borders. There are trips going out of the Washington DC areas into nearby neighborhoods. Most of the trips are concentrated inside the Washington DC borders. 
+
 
 ## Findings
 
@@ -37,3 +42,5 @@
 6. There are more member trips on the weekdays than there are member trips on the weekends.
 
 7. Low income tracts (less than 30000 median income) tend to be near the north and east borders of the Washington DC area.
+
+8. Using Tableau, I was able to visualize the distribution of casual and member users at each station. It was then that I realized that I should filter for the major user at each station and found that there is a clustering of casual bikers in one area while member bikers are spread out.
