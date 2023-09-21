@@ -1,6 +1,6 @@
 data-science-portfolio
 
-Tagline: Python : technologies: matplotlib, numpy, seaborn, sklearn, csv, re, datetime, requests, dask, pandas, geopandas, ntlk, selenium
+Tagline: Python : technologies: matplotlib, numpy, seaborn, sklearn, csv, re, datetime, requests, dask, pandas, geopandas, ntlk, selenium, plotly, python-pptx, unittest
 
 # Welcome to My Data Science Portfolio! 
 It can be categorized in four topics: collecting data, cleaning data, visualizing data, analyzing data, predicting data, and end to end projects
