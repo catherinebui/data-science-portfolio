@@ -11,5 +11,7 @@ This portfolio is to showcase my capability to learn and apply data science and 
 
 I am hoping that through data science frameworks, statistics, and programming tools, I can understand urban economics, economic growth, people's behaviors and motivation, and socioeconomic patterns. 
 
+Each folder is organized by projects. I have a specific folder for "Workshops and Trainings" I have conducted for my colleagues as well as presenting code examples on my computer science programming ability.
+
 
 
